@@ -1,11 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+<%- include('./_includes/_head') %>
+
+<body>
+  <%- include('./_includes/_header') %>
+  <main>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+    <h2>Escolha uma opção:</h2>
+    <div class="buttons">
+      <a href="/register">
+        <input type="button" id="newDoctor" value="Cadastrar Novo Médico" />
+      </a>
+      <a href="/list">
+        <input type="button" id="listDoctor" value="Consultar Médicos" />
+      </a>
+      <a href="/search">
+        <input type="button" id="searchDoctor" value="Procurar por Médicos" />
+      </a>
+    </div>
+  </main>
+  <%- include('./_includes/_footer') %>
+</body>

@@ -1,8 +1,138 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-background-header);
+  height: 56px;
 }
 
-a {
-  color: #00B7FF;
+header nav {
+  display: flex;
+  align-items: center;
+  color: var(--color-text-in-primary);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2em;
+}
+
+.logo {
+  color: var(--color-text-in-primary);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text-in-primary);
+  background-color: var(--color-background-footer);
+  height: 40px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 96px);
+  color: var(--color-text-in-secondary);
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: flex-start;
+}
+
+.registerForm input,
+select {
+  width: 100%;
+  margin-bottom: 16px;
+  height: 2rem;
+  padding: 2px;
+}
+
+.clinics {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.option {
+  width: 32%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.clinics input {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  margin: auto 10px;
+}
+
+.clinics label {
+  width: 100%;
+}
+
+.doctorsList {
+  width: 80%;
+  margin: 0 auto;
+  min-height: calc(100vh - 196px);
+}
+
+.doctorItem {
+  display: flex;
+  width: 100%;
+  margin: 15px 0;
+  padding: 10px;
+  border-bottom: 2px solid var(--color-border);
+}
+.doctorInfos {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.clinicInfos {
+  width: 60%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+}
+
+input[type='button'] {
+  padding: 20px;
+  border: 1px solid var(--color-border-wht);
+  background-color: var(--color-background-header);
+  color: var(--color-text-in-primary);
+  width: 450px;
+}
+
+input[type='submit'] {
+  border: 1px solid var(--color-border-wht);
+  background-color: var(--color-background-header);
+  color: var(--color-text-in-primary);
+  min-width: 200px;
+}
+
+.buttons {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 30vh;
 }

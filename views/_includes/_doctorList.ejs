@@ -1,0 +1,24 @@
+<div class="doctorsList">
+  <% doctors.forEach( doctor => { %>
+  <div class="doctorItem" id="doctor.id">
+    <div class="doctorInfos">
+      <h4>ID: <em><%= doctor.id %></em></h4>
+      <h4>Nome: <em><%= doctor.name %></em></h4>
+      <h4>CRM: <em><%= doctor.crm %></em></h4>
+      <h4>Telefone: <em><%= doctor.phone %></em></h4>
+      <h4>Cidade: <em><%= doctor.city %> / <%= doctor.state %></em></h4>
+    </div>
+    <div class="clinicInfos">
+      <h5>
+        <% doctor.clinics.forEach( clinic => { %> <%= clinic.name %> / <% }) %>
+      </h5>
+    </div>
+    <div class="actions">
+      <ul>
+        <a href="/delete/<%= doctor.id %>"><li>Deletar</li></a>
+        <a href="/edit/<%= doctor.id %>"><li>Editar</li></a>
+      </ul>
+    </div>
+  </div>
+  <% }) %>
+</div>

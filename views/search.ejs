@@ -1,0 +1,25 @@
+<%- include('./_includes/_head') %>
+
+<body>
+  <%- include('./_includes/_header') %>
+  <main>
+    <h1><%= title %></h1>
+    <h2>Médicos Cadastrados:</h2>
+    <div class="searchBox">
+      <form action="/search" method="POST">
+        <label for="search">Digite o Nome do Médico: </label>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Deixe em branco para buscar todos."
+        />
+        <input type="submit" value="Buscar" />
+      </form>
+    </div>
+    <% if (typeof(doctors) == 'undefined' || typeof(doctors) == null) {%>
+    <div class="doctorsList"></div>
+    <% } else { %> <%- include('./_includes/_doctorList') %> <% } %>
+  </main>
+  <%- include('./_includes/_footer') %>
+</body>

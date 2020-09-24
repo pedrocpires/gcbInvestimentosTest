@@ -1,0 +1,67 @@
+<%- include('./_includes/_head') %>
+
+<body>
+  <%- include('./_includes/_header') %>
+  <main>
+    <h1><%= title %></h1>
+    <h2>Formulário de cadastro de um novo médico.</h2>
+    <div class="registerForm">
+      <form action="/register" method="POST">
+        <label for="name">Nome: <em>*</em> </label>
+        <input type="text" name="name" id="name" />
+        <label for="crm">CRM: <em>*</em> </label>
+        <input type="text" name="crm" id="crm" />
+        <label for="phone">Telefone: </label>
+        <input type="tel" name="phone" id="phone" />
+        <label for="state">Estado: </label>
+        <select name="state" id="state">
+          <option value="null" disabled selected>Selecione</option>
+          <option value="Acre">AC</option>
+          <option value="Alagoas">AL</option>
+          <option value="Amapá">AP</option>
+          <option value="Amazonas">AM</option>
+          <option value="Bahia">BA</option>
+          <option value="Ceará">CE</option>
+          <option value="Distrito Federal">DF</option>
+          <option value="Espírito Santo">ES</option>
+          <option value="Goiás">GO</option>
+          <option value="Maranhão">MA</option>
+          <option value="Mato Grosso">MT</option>
+          <option value="Mato Grosso do Sul">MS</option>
+          <option value="Minas Gerais">MG</option>
+          <option value="Pará">PA</option>
+          <option value="Paraíba">PB</option>
+          <option value="Paraná">PR</option>
+          <option value="Pernambuco">PE</option>
+          <option value="Piauí">PI</option>
+          <option value="Rio de Janeiro">RJ</option>
+          <option value="Rio Grande do Norte">RN</option>
+          <option value="Rio Grande do Sul">RS</option>
+          <option value="Rondônia">RO</option>
+          <option value="Roraima">RR</option>
+          <option value="Santa Catarina">SC</option>
+          <option value="São Paulo">SP</option>
+          <option value="Sergipe">SE</option>
+          <option value="Tocantins">TO</option>
+        </select>
+        <label for="city">Cidade: </label>
+        <input type="text" name="city" id="city" />
+        <div class="clinics">
+          <% options.forEach( option => { %>
+          <div class="option">
+            <input
+              type="checkbox"
+              name="options"
+              id="<%= option.id %>"
+              value="<%= option.id %>"
+            />
+            <label for="<%= option.id %>"> <%= option.name %> </label>
+          </div>
+          <% }) %>
+        </div>
+        <input type="submit" value="Cadastrar" />
+      </form>
+    </div>
+  </main>
+  <%- include('./_includes/_footer') %>
+</body>
